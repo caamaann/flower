@@ -1,0 +1,6 @@
+.next
+node_modules
+package.json
+next-sitemap.config.js
+tsconfig.json
+.eslintrc.js
