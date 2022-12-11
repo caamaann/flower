@@ -26,5 +26,20 @@
     "no-console": "warn",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "./src/components"],
+          ["@public", "./public"],
+          ["src", "./src"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    }
   }
 }

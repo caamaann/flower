@@ -1,6 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "src/assets/styles/main.scss"
+import type { AppProps } from "next/app"
+import { Helmet, HelmetProvider } from "react-helmet-async"
+import SEO from "@components/global/SEO"
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <HelmetProvider>
+      <SEO {...pageProps?.seo} />
+      <Helmet async>
+        <body className={`bd-${pageProps?.page ?? "default"}`} />
+      </Helmet>
+      <Component {...pageProps} />
+    </HelmetProvider>
+  )
 }

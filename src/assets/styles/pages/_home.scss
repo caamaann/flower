@@ -1,0 +1,54 @@
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.sc-home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: $beige;
+  .options-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .flower-wrapper {
+    .inner {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $brown;
+      box-shadow: 0px 0px 10px 0px $brown;
+      @extend .position-center;
+    }
+    .outer {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $yellow;
+      box-shadow: 0px 0px 10px 0px $yellow;
+      @extend .position-center;
+    }
+    .petals {
+      width: 200px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: $pink;
+      // border: 1px solid darken($pink, 10%);
+      box-shadow: 0px 0px 20px 0px $white inset;
+      @extend .position-center;
+    }
+  }
+}
